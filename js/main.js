@@ -1,9 +1,4 @@
-fetch('https://kanye.rest/')
-    .then(res => {
-        if (res.ok){
-            console.log('bien');
-        }else {
-            console.log('non');
-        }
-    })
-    .then(data => console.log(data));
+fetch("https://api.kanye.rest")
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
